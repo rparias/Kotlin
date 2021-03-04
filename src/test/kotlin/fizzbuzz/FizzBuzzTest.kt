@@ -28,4 +28,16 @@ class FizzBuzzTest {
         val result = fizzBuzz(30)
         assertThat(result).isEqualTo("fizzbuzz")
     }
+
+    @Test
+    internal fun `returns a string according with a range of two numbers`() {
+        val result = fizzBuzzInRange(1, 7)
+        assertThat(result).isEqualTo("1 2 fizz 4 buzz fizz 7")
+    }
+
+    @Test
+    internal fun `returns a string according with a range of two numbers since 14 to 17`() {
+        val result = fizzBuzzInRange(14, 17)
+        assertThat(result).isEqualTo("14 fizzbuzz 16 17")
+    }
 }
